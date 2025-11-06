@@ -13,48 +13,49 @@
     }
 
     body {
-      background: linear-gradient(145deg, #0c0c0c, #1a1a1a);
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
       color: #d1d1d1;
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      align-items: center;
       overflow: hidden;
+      text-align: center;
     }
 
     img {
-      <img src="logo.png" alt="EO YAZILIM logosu" />
-      width: 160px;
-      margin-bottom: 25px;
+      width: 220px;
+      max-width: 80%;
+      border-radius: 10px;
+      animation: fadeInScale 1.5s ease forwards;
       opacity: 0;
-      transform: scale(0.9);
-      animation: fadeInLogo 1.5s ease forwards;
+      transform: scale(0.8);
     }
 
     h1 {
-      font-size: 2.6rem;
-      letter-spacing: 2px;
+      margin-top: 25px;
+      font-size: 2.4rem;
+      letter-spacing: 3px;
       color: #c0c0c0;
-      text-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+      text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+      animation: fadeIn 2s ease forwards 0.6s;
       opacity: 0;
-      animation: fadeInText 2s ease forwards 0.8s;
     }
 
     p {
       font-size: 1.1rem;
       color: #a9a9a9;
       margin: 15px 0 40px;
+      animation: fadeIn 2s ease forwards 1s;
       opacity: 0;
-      animation: fadeInText 2s ease forwards 1.5s;
     }
 
     .buttons {
       display: flex;
       gap: 20px;
+      animation: fadeIn 2s ease forwards 1.5s;
       opacity: 0;
-      animation: fadeInText 2s ease forwards 2s;
     }
 
     a {
@@ -72,25 +73,38 @@
       box-shadow: 0 0 15px #c0c0c0;
     }
 
-    @keyframes fadeInLogo {
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8rem;
+      color: #555;
+      letter-spacing: 1px;
+      animation: fadeIn 2s ease forwards 2s;
+      opacity: 0;
+    }
+
+    @keyframes fadeInScale {
       to {
         opacity: 1;
         transform: scale(1);
       }
     }
 
-    @keyframes fadeInText {
+    @keyframes fadeIn {
       to {
         opacity: 1;
-        transform: translateY(0);
       }
     }
 
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.8rem;
-      color: #666;
+    /* Parlama efekti */
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #888; }
+      50% { text-shadow: 0 0 20px #c0c0c0; }
+      100% { text-shadow: 0 0 10px #888; }
+    }
+
+    h1:hover {
+      animation: glow 2s infinite;
     }
   </style>
 </head>
@@ -100,13 +114,10 @@
   <p>Modern çözümler, profesyonel yazılım projeleri.</p>
 
   <div class="buttons">
-    <a href="https://instagram.com/kullaniciadiniz" target="_blank">Instagram</a>
-    <a href="tel:+905XXXXXXXXX">Telefon</a>
+    <a href="https://instagram.com/e.oguzz69" target="_blank">Instagram</a>
+    <a href="tel:+905523210126">Telefon</a>
   </div>
 
   <footer>© 2025 EO YAZILIM</footer>
 </body>
 </html>
-
-
-

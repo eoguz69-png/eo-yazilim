@@ -1,42 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>EO YAZILIM — Oğuzhan Sancar</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Ben Eşref Oğuzhan Sancar, web uygulamaları ve mobil yazılımlar geliştiriyorum.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EO YAZILIM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #0c0c0c, #1a1a1a);
+      color: #d1d1d1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    img {
+      width: 160px;
+      margin-bottom: 25px;
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInLogo 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      letter-spacing: 2px;
+      color: #c0c0c0;
+      text-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+      opacity: 0;
+      animation: fadeInText 2s ease forwards 0.8s;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #a9a9a9;
+      margin: 15px 0 40px;
+      opacity: 0;
+      animation: fadeInText 2s ease forwards 1.5s;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      opacity: 0;
+      animation: fadeInText 2s ease forwards 2s;
+    }
+
+    a {
+      text-decoration: none;
+      color: #c0c0c0;
+      border: 1px solid #c0c0c0;
+      padding: 10px 22px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background: #c0c0c0;
+      color: #111;
+      box-shadow: 0 0 15px #c0c0c0;
+    }
+
+    @keyframes fadeInLogo {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="brand">EO YAZILIM</h1>
-      <p class="tagline">Ben Eşref Oğuzhan Sancar, web uygulamaları ve mobil yazılımlar geliştiriyorum.</p>
-    </div>
-  </header>
+  <img src="logo.png" alt="EO YAZILIM logosu" />
+  <h1>EO YAZILIM</h1>
+  <p>Modern çözümler, profesyonel yazılım projeleri.</p>
 
-  <main class="container main-content">
-    <section class="about card">
-      <h2>Hakkımda</h2>
-      <p>Merhaba — ben Eşref Oğuzhan Sancar. Web uygulamaları, modern frontend ve mobil çözümler geliştiriyorum. İhtiyaçlara özel, performans odaklı projeler yaparım.</p>
-    </section>
+  <div class="buttons">
+    <a href="https://instagram.com/kullaniciadiniz" target="_blank">Instagram</a>
+    <a href="tel:+905XXXXXXXXX">Telefon</a>
+  </div>
 
-    <section class="contact card">
-      <h2>İletişim</h2>
-      <p>Instagram: <a id="instagram-link" href="https://instagram.com/e.oguzz69?igsh=MXZjbm56YWsyNG5tYw==" target="_blank" rel="noopener">@e.oguzz69</a></p>
-      <p>Telefon: <a id="phone-link" href="tel:+905523210126">+90 (552) 321 01 26</a></p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> EO YAZILIM — Oğuzhan Sancar</small>
-    </div>
-  </footer>
-
-  <script>
-    // küçük JS: yıl güncelleme
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <footer>© 2025 EO YAZILIM</footer>
 </body>
 </html>
+

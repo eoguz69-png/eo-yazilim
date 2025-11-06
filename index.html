@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EO YAZILIM — Oğuzhan Sancar</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Ben Eşref Oğuzhan Sancar, web uygulamaları ve mobil yazılımlar geliştiriyorum.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">EO YAZILIM</h1>
+      <p class="tagline">Ben Eşref Oğuzhan Sancar, web uygulamaları ve mobil yazılımlar geliştiriyorum.</p>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="about card">
+      <h2>Hakkımda</h2>
+      <p>Merhaba — ben Eşref Oğuzhan Sancar. Web uygulamaları, modern frontend ve mobil çözümler geliştiriyorum. İhtiyaçlara özel, performans odaklı projeler yaparım.</p>
+    </section>
+
+    <section class="contact card">
+      <h2>İletişim</h2>
+      <p>Instagram: <a id="instagram-link" href="https://instagram.com/e.oguzz69?igsh=MXZjbm56YWsyNG5tYw==" target="_blank" rel="noopener">@e.oguzz69</a></p>
+      <p>Telefon: <a id="phone-link" href="tel:+905523210126">+90 (552) 321 01 26</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> EO YAZILIM — Oğuzhan Sancar</small>
+    </div>
+  </footer>
+
+  <script>
+    // küçük JS: yıl güncelleme
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,188 +1,208 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EOS YAZILIM | Profesyonel Yazılım ve Teknoloji Çözümleri</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0e0e0e;
-      color: #e0e0e0;
-      scroll-behavior: smooth;
-    }
-    header {
-      background-color: #1a1a1a;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 60px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    }
-    header img {
-      height: 50px;
-    }
-    nav a {
-      color: #e0e0e0;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00aaff;
-    }
-    section {
-      padding: 80px 10%;
-      text-align: center;
-    }
-    .hero {
-      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-      color: #fff;
-      padding: 150px 10%;
-    }
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.3em;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-    .btn {
-      background: #00aaff;
-      color: white;
-      padding: 12px 30px;
-      text-decoration: none;
-      border-radius: 25px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #0088cc;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .service {
-      background: #1f1f1f;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.05);
-      transition: 0.3s;
-    }
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(0,170,255,0.3);
-    }
-    footer {
-      background: #111;
-      color: #888;
-      text-align: center;
-      padding: 20px;
-    }
-    .social a {
-      margin: 0 10px;
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .projects img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EOS YAZILIM</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+  body{
+    background:#0e0e0e;
+    color:#f5f5f5;
+    scroll-behavior:smooth;
+  }
+
+  header{
+    position:fixed;
+    top:0;left:0;width:100%;
+    background:rgba(15,15,15,0.85);
+    backdrop-filter:blur(6px);
+    display:flex;justify-content:space-between;align-items:center;
+    padding:15px 40px;z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+  }
+  header h1{font-size:1.3rem;letter-spacing:1px;color:#00ffff;}
+  nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#ccc;
+    transition:color .3s;
+  }
+  nav a:hover{color:#fff;}
+
+  .hero{
+    height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:100px 20px;
+  }
+  .hero img{
+    width:140px;height:auto;margin-bottom:25px;
+    filter:drop-shadow(0 0 8px #00ffff);
+  }
+  .hero h2{font-size:2.3rem;margin-bottom:10px;}
+  .hero p{max-width:600px;color:#ccc;font-size:1.05rem;}
+
+  section{
+    padding:100px 20px;
+    max-width:1100px;
+    margin:auto;
+  }
+  h2.section-title{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:50px;
+    color:#00ffff;
+  }
+
+  .services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+  }
+  .service-box{
+    background:#181818;
+    padding:25px;
+    border-radius:12px;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .service-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,255,255,0.1);
+  }
+  .service-box h3{color:#fff;margin-bottom:10px;}
+  .service-box p{color:#aaa;font-size:0.95rem;}
+
+  .projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+  }
+  .project-box{
+    background:#181818;
+    border-radius:12px;
+    overflow:hidden;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .project-box:hover{
+    transform:translateY(-6px);
+    box-shadow:0 8px 20px rgba(0,255,255,0.1);
+  }
+  .project-box img{
+    width:100%;height:150px;object-fit:cover;
+  }
+  .project-box div{
+    padding:20px;
+  }
+
+  .about p{color:#ccc;line-height:1.6;font-size:1.05rem;text-align:center;max-width:900px;margin:auto;}
+
+  .contact{
+    text-align:center;
+  }
+  .contact a{
+    display:inline-block;
+    margin:10px;
+    text-decoration:none;
+    color:#00ffff;
+    font-weight:500;
+    transition:color .3s;
+  }
+  .contact a:hover{color:#fff;}
+
+  footer{
+    text-align:center;
+    padding:30px 10px;
+    background:#101010;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,0.05);
+  }
+
+  @media (max-width:600px){
+    .hero h2{font-size:1.8rem;}
+    header{flex-direction:column;}
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <img src="logo1.png" alt="EOS YAZILIM Logo">
-    <nav>
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#projeler">Projeler</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
-  </header>
+<header>
+  <h1>EOS YAZILIM</h1>
+  <nav>
+    <a href="#services">Hizmetler</a>
+    <a href="#projects">Projeler</a>
+    <a href="#about">Hakkımızda</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>EOS YAZILIM</h1>
-    <p>Yazılım, siber güvenlik ve yapay zekada modern çözümler üreten teknoloji ekibi.</p>
-    <a href="#hizmetler" class="btn">Hizmetlerimizi Keşfet</a>
-  </section>
+<section class="hero" id="home">
+  <img src="logo1.png" alt="EOS YAZILIM Logosu">
+  <h2>Yazılımda Güven, Kalite ve Yenilik</h2>
+  <p>EOS Yazılım, modern işletmeler için yenilikçi yazılım çözümleri üretir. Güvenilir altyapılar, akıllı sistemler ve kusursuz kullanıcı deneyimi hedefimizdir.</p>
+</section>
 
-  <section id="hakkimizda">
-    <h2>Hakkımızda</h2>
-    <p>
-      EOS Yazılım, 2025 yılında yenilikçi bir vizyonla kurulmuş bağımsız bir yazılım geliştirme ekibidir.
-      Web teknolojileri, mobil uygulama geliştirme, veri analizi, yapay zeka entegrasyonları ve siber güvenlik alanlarında çözümler üretiyoruz.
-      Amacımız; işletmelerin dijital dönüşüm süreçlerini hızlandırmak, verimliliği artırmak ve teknolojiyle rekabet avantajı sağlamaktır.
-    </p>
-  </section>
-
-  <section id="hizmetler">
-    <h2>Hizmetlerimiz</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Web Tasarımı ve Geliştirme</h3>
-        <p>Modern, responsive ve SEO uyumlu web siteleri oluşturuyoruz.</p>
-      </div>
-      <div class="service">
-        <h3>Veritabanı Yönetimi</h3>
-        <p>Kurumsal veri depolama, yedekleme ve güvenli erişim çözümleri.</p>
-      </div>
-      <div class="service">
-        <h3>CRM ve ERP Sistemleri</h3>
-        <p>İşletmenizin tüm süreçlerini tek panelden yönetin. Özelleştirilebilir sistemler geliştiriyoruz.</p>
-      </div>
-      <div class="service">
-        <h3>Siber Güvenlik</h3>
-        <p>Veri koruması, ağ güvenliği, sızma testleri ve güvenlik analizleri.</p>
-      </div>
-      <div class="service">
-        <h3>Yapay Zeka Otomasyonları</h3>
-        <p>Chatbotlar, analiz sistemleri ve üretken yapay zeka entegrasyonlarıyla süreçleri hızlandırın.</p>
-      </div>
-      <div class="service">
-        <h3>Mobil Uygulamalar</h3>
-        <p>Android ve iOS platformlarına özel kullanıcı dostu uygulamalar geliştiriyoruz.</p>
-      </div>
+<section id="services">
+  <h2 class="section-title">Hizmetlerimiz</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Web Tasarımı</h3>
+      <p>Modern, mobil uyumlu ve hızlı web siteleri geliştiriyoruz. Kurumsal kimliğinize uygun özel tasarımlar.</p>
     </div>
-  </section>
-
-  <section id="projeler">
-    <h2>Projelerimiz</h2>
-    <div class="projects">
-      <img src="https://source.unsplash.com/800x400/?code,technology" alt="Proje 1">
-      <img src="https://source.unsplash.com/800x400/?ai,computer" alt="Proje 2">
-      <img src="https://source.unsplash.com/800x400/?cyber,security" alt="Proje 3">
+    <div class="service-box">
+      <h3>CRM & ERP Sistemleri</h3>
+      <p>İş süreçlerinizi dijitalleştiren, verimliliği artıran özelleştirilmiş sistemler tasarlıyoruz.</p>
     </div>
-  </section>
-
-  <section id="iletisim">
-    <h2>İletişim</h2>
-    <p>Bize ulaşın: <br> 
-      <a href="mailto:eosyazilim@gmail.com" style="color:#00aaff;">eosyazilim@gmail.com</a><br>
-      <a href="https://x.com/eosyazilim" target="_blank" style="color:#00aaff;">X (Twitter)</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 EOS YAZILIM | Tüm hakları saklıdır.</p>
-    <div class="social">
-      <a href="https://x.com/eosyazilim" target="_blank">X</a> |
-      <a href="mailto:eosyazilim@gmail.com">Gmail</a>
+    <div class="service-box">
+      <h3>Veri Tabanı Yönetimi</h3>
+      <p>Güvenli, ölçeklenebilir ve hızlı veri tabanı çözümleri ile verilerinizi profesyonelce yönetin.</p>
     </div>
-  </footer>
+    <div class="service-box">
+      <h3>Yapay Zekâ Otomasyonları</h3>
+      <p>İş akışlarını optimize eden, öğrenen ve tahmin eden yapay zekâ sistemleri geliştiriyoruz.</p>
+    </div>
+    <div class="service-box">
+      <h3>Siber Güvenlik</h3>
+      <p>Verilerinizi korumak için güçlü güvenlik çözümleri ve izleme sistemleri sağlıyoruz.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projelerimiz</h2>
+  <div class="projects">
+    <div class="project-box">
+      <img src="https://source.unsplash.com/600x400/?code" alt="Proje 1">
+      <div><h3>Kurumsal Web Platformu</h3><p>Bir şirket için özel yönetim paneli ve kullanıcı arayüzü geliştirildi.</p></div>
+    </div>
+    <div class="project-box">
+      <img src="https://source.unsplash.com/600x400/?ai,tech" alt="Proje 2">
+      <div><h3>Yapay Zekâ Analiz Aracı</h3><p>Veri analizi ve tahminleme yapan AI tabanlı web uygulaması.</p></div>
+    </div>
+    <div class="project-box">
+      <img src="https://source.unsplash.com/600x400/?security" alt="Proje 3">
+      <div><h3>Siber Güvenlik Sistemi</h3><p>Gerçek zamanlı saldırı izleme ve önleme altyapısı geliştirildi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">Hakkımızda</h2>
+  <div class="about">
+    <p>EOS Yazılım, dijital dünyada işletmelere modern çözümler sunan bir teknoloji şirketidir. Amacımız, güçlü yazılım altyapılarıyla işletmelerin rekabet gücünü artırmaktır. Ekibimiz; web teknolojileri, veri analizi, yapay zekâ ve güvenlik alanlarında uzman profesyonellerden oluşur.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">İletişim</h2>
+  <div class="contact">
+    <a href="mailto:eosyazilim@gmail.com">📧 eosyazilim@gmail.com</a>
+    <a href="https://x.com/" target="_blank">𝕏 @eosyazilim</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 EOS YAZILIM | Tüm hakları saklıdır.
+</footer>
 
 </body>
 </html>
